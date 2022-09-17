@@ -1,0 +1,10 @@
+@keyframes animate {
+    100% {
+        transform: scale(1.5);
+    }
+}
+@keyframes rainbow {
+    100% {
+        transform: scale(3);
+    }
+}
