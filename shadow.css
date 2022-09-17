@@ -1,39 +1,134 @@
 * {
     box-sizing: border-box;
     width: 100%;
+    background-color: black;
 
     margin: 0;
     padding: 0;
 }
 div {
     width: 100vw;
-    height: 100vh;
-    margin: 5rem;
+    margin: 10rem;
 }
 #one {
-    width: 10%;
+    width: 20%;
     aspect-ratio: 1;
-    margin: 2rem;
-    border: 0.25rem solid black;
-    border-radius: 1rem;
-    background: darkblue;
-    box-shadow: 15px 15px 20px #2c2974, 25px 25px 30px #5e5e6e;
+    border: 0;
+    background: rgb(139, 0, 0);
+    clip-path: polygon(
+        71% 0,
+        100% 0,
+        100% 100%,
+        74% 100%,
+        31% 43%,
+        31% 100%,
+        0 100%,
+        0 0,
+        24% 0,
+        74% 70%
+    );
+    z-index: 1;
+    position: absolute;
+    animation: animate 5s linear infinite;
 }
 #two {
-    width: 10%;
+    width: 19.7%;
     aspect-ratio: 1;
-    margin: 2rem;
-    border: 0.25rem solid black;
-    background: lightyellow;
-    border-radius: 1rem;
-    box-shadow: 15px 15px 20px #aaab96, 20px 20px 25px #a8a88d;
+    border: 0;
+    background: rgb(192, 6, 6);
+    z-index: 2;
+    clip-path: polygon(
+        100% 100%,
+        100% 0,
+        100% 100%,
+        70% 100%,
+        0 0,
+        0 100%,
+        0 100%,
+        0 0,
+        30% 0,
+        100% 100%
+    );
+    position: relative;
+    bottom: 1.9rem;
+    animation: animate 5s linear infinite;
+
+    -webkit-box-shadow: rgb(0, 0, 0) 0 -1px 4px, -2px 1px 32px -8px #000000;
+    box-shadow: #fff 0 -1px 4px, -2px 1px 32px -8px #000000;
+}
+aside {
+    width: 100vw;
+    margin: 10rem;
 }
 #three {
-    width: 10%;
-    aspect-ratio: 1;
-    margin: 2rem;
-    border: 0.25rem solid black;
-    background: rgb(171, 133, 88);
+    width: 15%;
+    aspect-ratio: 1/4;
+    margin: 20rem;
+    border: 0;
+    animation: rainbow 5s linear infinite;
+    background: rgb(215, 24, 24);
+    background: linear-gradient(
+        90deg,
+        rgba(215, 24, 24, 1) 0%,
+        rgba(5, 16, 48, 1) 2%,
+        rgba(195, 0, 12, 1) 5%,
+        rgba(95, 16, 129, 1) 8%,
+        rgba(167, 55, 55, 1) 10%,
+        rgba(0, 0, 0, 1) 12%,
+        rgba(201, 42, 107, 1) 14%,
+        rgba(255, 41, 90, 1) 16%,
+        rgba(0, 0, 0, 1) 18%,
+        rgba(255, 55, 0, 1) 20%,
+        rgba(255, 145, 42, 1) 23%,
+        rgba(14, 7, 7, 1) 25%,
+        rgba(255, 0, 34, 1) 27%,
+        rgba(254, 112, 112, 1) 28%,
+        rgba(0, 0, 0, 1) 30%,
+        rgba(228, 150, 5, 1) 33%,
+        rgba(255, 207, 31, 1) 35%,
+        rgba(201, 5, 93, 1) 38%,
+        rgba(0, 0, 0, 1) 40%,
+        rgba(252, 69, 69, 1) 44%,
+        rgba(249, 224, 45, 1) 46%,
+        rgba(184, 0, 136, 1) 48%,
+        rgba(252, 126, 69, 1) 51%,
+        rgba(0, 0, 0, 1) 55%,
+        rgba(252, 69, 69, 1) 57%,
+        rgba(255, 166, 43, 1) 59%,
+        rgba(152, 0, 45, 1) 62%,
+        rgba(252, 69, 111, 1) 65%,
+        rgba(0, 0, 0, 1) 67%,
+        rgba(255, 107, 107, 1) 70%,
+        rgba(194, 0, 5, 1) 72%,
+        rgba(255, 176, 0, 1) 75%,
+        rgba(212, 81, 81, 1) 78%,
+        rgba(242, 168, 52, 1) 81%,
+        rgba(11, 6, 6, 1) 82%,
+        rgba(252, 69, 69, 1) 84%,
+        rgba(228, 148, 54, 1) 86%,
+        rgba(11, 6, 6, 1) 88%,
+        rgba(242, 72, 9, 1) 91%,
+        rgba(158, 11, 136, 1) 93%,
+        rgba(223, 44, 44, 1) 95%,
+        rgba(11, 6, 6, 1) 98%,
+        rgba(157, 13, 13, 1) 98%,
+        rgba(209, 70, 7, 1) 100%
+    );
 
-    border-radius: 1.5rem;
+    box-shadow: 0px 0px 20px rgba(174, 0, 0, 0.574),
+        0px 0px 80px rgba(188, 0, 0, 0.556),
+        0px 0px 100px rgba(188, 0, 0, 0.509),
+        0px 0px 200px rgba(188, 0, 0, 0.307),
+        inset 0px 0px 800px rgba(255, 77, 0, 0.329);
+}
+
+@keyframes animate {
+    100% {
+        transform: scale(1.5);
+    }
+}
+@keyframes rainbow {
+    100% {
+        transform: scale(3);
+    }
 }
