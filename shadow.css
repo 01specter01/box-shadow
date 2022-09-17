@@ -33,7 +33,7 @@ div {
     aspect-ratio: 1;
     margin: 2rem;
     border: 0.25rem solid black;
-    background: darkorange;
+    background: rgb(171, 133, 88);
 
     border-radius: 1.5rem;
 }
